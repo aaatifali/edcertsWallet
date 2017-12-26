@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "name": "Dashboard",
+            "link": "home",
+            "glyph": "fa fa-fw fa-dashboard",
+            "children": [],
+            "collapse": false
+        },
+       
+        
+       
+        
+        {
+            "name": "applicaions",
+            "link": "components",
+            "glyph": "fa fa-fw fa-plus",
+            "children": [
+                {
+                    "name": "Apply for Id",
+                    "link": "accordion",
+                    "glyph": ""
+                },
+                {
+                    "name": "Appy for Library card",
+                    "link": "alert",
+                    "glyph": ""
+                }
+               
+               ],
+            "collapse": true
+        }
+    ]
+}

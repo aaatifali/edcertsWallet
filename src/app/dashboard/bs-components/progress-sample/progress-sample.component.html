@@ -1,0 +1,65 @@
+<h1>Progress Bar
+  <a target="_blank" href="http://valor-software.com/ngx-bootstrap/#/progressbar">
+    <img alt="" src="assets/img//link-doc.png">
+  </a>
+</h1>
+<p>Provide up-to-date feedback on the progress of a workflow or action with simple yet flexible progress bars.</p>
+<hr>
+<h3>
+  Examples
+</h3>
+<hr>
+<p>This section shows the NG2-bootstrap version of progress bars under BS4</p>
+<div class="row">
+  <div class="col-md-4">
+    <h4>Static</h4>
+    <div class="row">
+      <div class="col-sm-4">
+        <progressbar class="progress" [value]="55" [max]="100">&nbsp;</progressbar>
+      </div>
+      <div class="col-sm-4">
+        <progressbar class="progress progress-striped" [value]="22" [max]="100" type="warning">22%</progressbar>
+      </div>
+      <div class="col-sm-4">
+        <progressbar class="progress progress-striped active" [max]="200" [value]="166" type="danger">
+          <i>166 / 200</i>
+        </progressbar>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h4>Dynamic (value: {{dynamic}})</h4>
+    <progressbar class="progress progress-striped progress-animated" [max]="max" [value]="dynamic">
+      <span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span>
+    </progressbar>
+
+    <small>
+      <em>No animation</em>
+    </small>
+    <progressbar class="progress progress-success progress-bar-striped" [value]="dynamic" [max]="100">
+      <b>{{dynamic}}%</b>
+    </progressbar>
+
+    <small>
+      <em>Object (changes type based on value)</em>
+    </small>
+    <progressbar class="progress progress-striped progress-animated" [value]="dynamic" [max]="100" [type]="type">
+      {{type}}
+      <i *ngIf="showWarning">!!! Watch out !!!</i>
+    </progressbar>
+    <p></p>
+    <button type="button" class="btn btn-sm btn-primary" (click)="random()">Randomize</button>
+  </div>
+  <div class="col-md-4">
+    <h4>Stacked</h4>
+    <div class="row col-lg-12">
+      <!-- todo: implement as component -->
+      <progressbar class="progress" [value]="stacked" [max]="100"></progressbar>
+    </div>
+    <p></p>
+    <div class="row col-md-12">
+      <button type="button" class="btn btn-sm btn-primary" (click)="randomStacked()">Randomize</button>
+    </div>
+  </div>
+</div>
+<hr>
